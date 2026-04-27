@@ -317,7 +317,7 @@ ${response}
 
   const handleManualQuery = async (query) => {
     try {
-      const res = await fetch("http://localhost:5000/chat", {
+      const res = await fetch("https://digital-ai-bot.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: query })
