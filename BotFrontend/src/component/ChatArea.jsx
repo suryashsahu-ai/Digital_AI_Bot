@@ -335,7 +335,7 @@ ${response}
       ])
     } catch (error) {
       const errorMessage = error.message.includes('fetch')
-        ? "## 🌐 Connection Error\n\nI can't reach my AI backend. Please make sure the server is running on localhost:5000\n\n**💡 Quick Fix:** Check if the backend server is started!"
+        ? "## 🌐 Connection Error\n\nI can't reach my AI backend. Please make sure the server is running on \n\n**💡 Quick Fix:** Check if the backend server is started!"
         : "## ❌ Server Error\n\nSomething went wrong. Please try again."
 
       setMessages(prev => [
@@ -353,7 +353,7 @@ ${response}
     setInputMessage("")
 
     try {
-      const res = await fetch("http://localhost:5000/chat", {
+      const res = await fetch("https://digital-ai-bot.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: currentMessage })
@@ -372,7 +372,7 @@ ${response}
       ])
     } catch (error) {
       const errorMessage = error.message.includes('fetch')
-        ? "## 🌐 Connection Error\n\nI can't reach my AI backend. Please make sure the server is running on localhost:5000\n\n**💡 Quick Fix:** Check if the backend server is started!"
+        ? "## 🌐 Connection Error\n\nI can't reach my AI backend. Please make sure the server is running on https://digital-ai-bot.onrender.com/\n\n**💡 Quick Fix:** Check if the backend server is started!"
         : "## ❌ Server Error\n\nSomething went wrong. Please try again."
 
       setMessages(prev => [
