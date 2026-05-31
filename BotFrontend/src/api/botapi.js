@@ -1,6 +1,6 @@
 const sendMessage = async () => {
     // "https://digital-ai-bot.onrender.com/chat",
-    const res = await fetch(["http://localhost:5000"], {
+    const res = await fetch("https://digital-ai-bot.onrender.com/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json" // ✅ fixed
