@@ -9,12 +9,9 @@ connectDb();
 
 const app = express();
 const port = 5000;
-
+// "https://digital-ai-bot-32rc.vercel.app"
 app.use(cors({   origin: [
-        "http://localhost:5173",
-        "https://digital-ai-bot.vercel.app",
-        "https://digital-ai-bot-32rc.vercel.app"
-    ],}));
+        "http://localhost:5173"],}));
 app.use(express.urlencoded({extended:true}))
 app.use(express.json());
 
